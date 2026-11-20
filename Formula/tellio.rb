@@ -1,15 +1,15 @@
 class Tellio < Formula
   desc "Owner-controlled peer-to-peer folder sync for the command line"
   homepage "https://tellio.dev"
-  version "0.1.0"
+  version "0.1.3"
   license "MIT OR Apache-2.0"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/telliohq/homebrew-tellio/releases/download/v0.1.0/tellio-0.1.0-aarch64-apple-darwin.tar.gz"
-    sha256 "29a87741a251a3af6bc31b838a99a2ad79acf2ac717df92e066a39c93416a347"
+    url "https://github.com/telliohq/homebrew-tellio/releases/download/v0.1.3/tellio-0.1.3-aarch64-apple-darwin.tar.gz"
+    sha256 "2e6ddc7f9284e3f0115cc30a75a3afb300f5183dd977aba090a4a67823bd207b"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/telliohq/homebrew-tellio/releases/download/v0.1.0/tellio-0.1.0-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "575cc163a9ab6ad91b5b49257c3848cae1926bbb4e0abeba75dbb1b237321924"
+    url "https://github.com/telliohq/homebrew-tellio/releases/download/v0.1.3/tellio-0.1.3-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "39e409269978487bd681420d9ce13acec71d97d86e4206adf1b55a354043f8f5"
   else
     odie "Tellio prebuilt archives support Apple Silicon macOS and x86-64 Linux only."
   end
