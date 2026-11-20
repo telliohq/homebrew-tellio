@@ -4,18 +4,22 @@ Homebrew tap for [Tellio](https://tellio.dev), an owner-controlled peer-to-peer 
 sync CLI.
 
 ```sh
-brew install telliohq/tellio/tellio
+brew tap telliohq/tellio
+brew trust telliohq/tellio
+brew install tellio
 brew services start tellio
 ```
 
-Homebrew 6 requires explicit trust for third-party taps. Installing the fully qualified
-formula trusts just that formula; if your Homebrew asks for whole-tap trust instead:
+The tap name is `telliohq/tellio`; the formula name is `tellio`. Homebrew's fully
+qualified form is `<owner>/<tap>/<formula>`, so the one-line equivalent is:
 
 ```sh
-brew tap telliohq/tellio
-brew trust --formula telliohq/tellio/tellio
 brew install telliohq/tellio/tellio
 ```
+
+Homebrew 6 requires explicit trust for third-party taps. `brew trust telliohq/tellio`
+trusts this single-formula tap; if you prefer item-level trust, use
+`brew trust --formula telliohq/tellio/tellio` first.
 
 The formula installs the unsigned prototype binaries from the GitHub release assets.
 `tellio service` uses a per-user LaunchAgent; `brew services` uses Homebrew's service
